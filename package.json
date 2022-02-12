@@ -1,0 +1,40 @@
+{
+  "name": "javascript-dev-kit",
+  "private": false,
+  "version": "0.28.5",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "login": "npm login",
+    "ver": "npm version minor",
+    "patch": "npm publish --access dist",
+    "upgradeLatest": "yarn upgrade-interactive --latest",
+    "tsc": "tsc --watch",
+    "test": "mocha",
+    "prettier": "prettier --config ./.prettierrc.json --write \"dist/**/*\"",
+    "delete_dist": "if exist \"./dist*\" Rmdir /S /Q \"./dist\"",
+    "generate-dist": "yarn delete_dist && tsc --p ./tsconfig.dist.json --declaration --declarationDir dist --outDir dist --pretty"
+  },
+  "dependencies": {
+    "axios": "*",
+    "google-libphonenumber": "*",
+    "jalali-moment": "*",
+    "lodash": "*"
+  },
+  "devDependencies": {
+    "@types/lodash": "*",
+    "@types/node": "^14.14.21",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "assert": "*",
+    "chai": "*",
+    "eslint": "*",
+    "eslint-config-standard": "*",
+    "eslint-config-standard-flow": "*",
+    "eslint-plugin-flowtype": "*",
+    "eslint-plugin-node": "*",
+    "geolib": "*",
+    "mocha": "*",
+    "typescript": "*"
+  }
+}
