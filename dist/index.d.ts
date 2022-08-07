@@ -59,17 +59,6 @@ declare namespace Kit {
             to: number;
         } | undefined;
         findDateFormat: (date: string) => string | undefined;
-        getMemoryUsage: () => Promise<{
-            rss: number;
-            heapTotal: number;
-            heapUsed: number;
-            external: number;
-            arrayBuffers: number;
-            osFreeMemory: number;
-            osTotalMemory: number;
-            osUsedMemory: number;
-        }>;
-        printMemoryUsage: () => void;
         createMemoryTracker: () => import("./src/utils/DebugUtils").MemoryTracker;
         isRunningOnNode: () => boolean;
         initEmail: (email: string) => string | undefined;
@@ -127,17 +116,6 @@ declare const _default: typeof Kit & {
         to: number;
     } | undefined;
     findDateFormat: (date: string) => string | undefined;
-    getMemoryUsage: () => Promise<{
-        rss: number;
-        heapTotal: number;
-        heapUsed: number;
-        external: number;
-        arrayBuffers: number;
-        osFreeMemory: number;
-        osTotalMemory: number;
-        osUsedMemory: number;
-    }>;
-    printMemoryUsage: () => void;
     createMemoryTracker: () => import("./src/utils/DebugUtils").MemoryTracker;
     isRunningOnNode: () => boolean;
     initEmail: (email: string) => string | undefined;

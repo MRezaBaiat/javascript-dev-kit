@@ -1,7 +1,7 @@
 {
   "name": "javascript-dev-kit",
   "private": false,
-  "version": "0.28.5",
+  "version": "0.28.7",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

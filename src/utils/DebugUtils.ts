@@ -1,4 +1,4 @@
-const getMemoryUsage = async (): Promise<{
+/* const getMemoryUsage = async (): Promise<{
   rss: number;
   heapTotal: number;
   heapUsed: number;
@@ -25,16 +25,16 @@ const getMemoryUsage = async (): Promise<{
         osUsedMemory: report.osTotalMemory - report.osFreeMemory
       };
     });
-};
+}; */
 
-const printMemoryUsage = () => {
+/* const printMemoryUsage = () => {
   const memory = getMemoryUsage();
   Object.keys(memory).forEach((key) =>
     console.log(
       `${key} ${Math.round((memory[key] / 1024 / 1024) * 100) / 100} MB`
     )
   );
-};
+}; */
 const isRunningOnNode = () => {
   // @ts-ignore
   if (typeof window === 'undefined') {
@@ -53,7 +53,7 @@ const isRunningOnNode = () => {
  */
 export class MemoryTracker {
   private start;
-
+/*
   public startRecording = () => {
     this.start = {
       memory: getMemoryUsage(),
@@ -88,7 +88,7 @@ export class MemoryTracker {
         )} MB`
     );
     return this;
-  };
+  }; */
 }
 
 const createMemoryTracker = () => {
@@ -96,8 +96,6 @@ const createMemoryTracker = () => {
 };
 
 export default {
-  getMemoryUsage,
-  printMemoryUsage,
   createMemoryTracker,
   isRunningOnNode
 };
